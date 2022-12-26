@@ -59,7 +59,7 @@ jobs:
           dir
           cd "Release"
           dir
-          tests.exe
+          ./tests.exe
           cd ..
           cd ..
           cd ..
