@@ -40,3 +40,9 @@ jobs:
           cd "build"
           cmake --build . --config Release
           cd ..
+      -
+         name: Test Release
+         run: |
+           cd "build"
+           cd "bin"
+           ./tests
