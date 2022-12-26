@@ -53,16 +53,9 @@ jobs:
       -
         name: Run Tests
         run: |
-          cd "build"
-          dir
-          cd "bin"
-          dir
-          cd "Release"
-          dir
-          ./tests.exe
-          cd ..
-          cd ..
-          cd ..
+          cd "build/bin/Release"
+          ./tests.exe --gtest_filter=-*GPU*
+          cd ../../..
       -
         name: Install Release
         run: |
