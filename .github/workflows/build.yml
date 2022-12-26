@@ -20,7 +20,7 @@ jobs:
         with:
           cmake-version: '3.16.x'
       - name: Setup Ninja
-        uses: seanmiddleditch/gha-setup-ninja@master
+        uses: ashutoshvarma/action-cmake-build@master
       -
         name: CMake Generate
         run: |
@@ -40,9 +40,3 @@ jobs:
           cd "build"
           cmake --build . --config Release
           cd ..
-      -
-        name: Test Release
-        run: |
-          cd "build"
-          cd "bin"
-          ./tests --gtest_filter=-*TextureTest*
